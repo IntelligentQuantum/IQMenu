@@ -1,0 +1,2 @@
+#!/bin/sh
+IQ-MENU-Path | IQ-MENU "$@" | ${SHELL:-"/bin/sh"} &
