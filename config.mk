@@ -1,4 +1,4 @@
-# IQ-MENU version
+# IQMenu version
 VERSION = 1
 
 # paths

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cachedir="${XDG_CACHE_HOME:-"$HOME/.cache"}"
-cache="$cachedir/IQ-MENU-Run"
+cache="$cachedir/IQMenu_Run"
 
 [ ! -e "$cachedir" ] && mkdir -p "$cachedir"
 

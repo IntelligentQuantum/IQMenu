@@ -830,7 +830,7 @@ static void setup(void)
 	XIM xim;
 	Window w, dw, *dws;
 	XWindowAttributes wa;
-	XClassHint ch = {"IQ-MENU", "IQ-MENU"};
+	XClassHint ch = {"IQMenu", "IQMenu"};
 #ifdef XINERAMA
 	XineramaScreenInfo *info;
 	Window pw;
@@ -933,7 +933,7 @@ static void setup(void)
 
 static void usage(void)
 {
-	fputs("usage: IQ-MENU [-bfiPrv] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
+	fputs("usage: IQMenu [-bfiPrv] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
 	      "             [-nb color] [-nf color] [-sb color] [-sf color] [-w windowid]\n", stderr);
 	exit(1);
 }
@@ -949,15 +949,15 @@ void read_Xresources(void)
 		XrmDatabase xdb = XrmGetStringDatabase(xrm);
 		XrmValue xval;
 
-		if (XrmGetResource(xdb, "IQ-MENU.font", "*", &type, &xval) == True) /* font or font set */
+		if (XrmGetResource(xdb, "IQMenu.font", "*", &type, &xval) == True) /* font or font set */
 			fonts[0] = strdup(xval.addr);
-		if (XrmGetResource(xdb, "IQ-MENU.color0", "*", &type, &xval) == True)  /* normal background color */
+		if (XrmGetResource(xdb, "IQMenu.color0", "*", &type, &xval) == True)  /* normal background color */
 			colors[SchemeNorm][ColBg] = strdup(xval.addr);
-		if (XrmGetResource(xdb, "IQ-MENU.color4", "*", &type, &xval) == True)  /* normal foreground color */
+		if (XrmGetResource(xdb, "IQMenu.color4", "*", &type, &xval) == True)  /* normal foreground color */
 			colors[SchemeNorm][ColFg] = strdup(xval.addr);
-		if (XrmGetResource(xdb, "IQ-MENU.color4", "*", &type, &xval) == True)  /* selected background color */
+		if (XrmGetResource(xdb, "IQMenu.color4", "*", &type, &xval) == True)  /* selected background color */
 			colors[SchemeSel][ColBg] = strdup(xval.addr);
-		if (XrmGetResource(xdb, "IQ-MENU.color0", "*", &type, &xval) == True)  /* selected foreground color */
+		if (XrmGetResource(xdb, "IQMenu.color0", "*", &type, &xval) == True)  /* selected foreground color */
 			colors[SchemeSel][ColFg] = strdup(xval.addr);
 
 		XrmDestroyDatabase(xdb);
@@ -974,7 +974,7 @@ int main(int argc, char *argv[])
 		if (!strcmp(argv[i], "-v"))
 		{
 		    /* prints version information */
-			puts("IQ-MENU-"VERSION);
+			puts("IQMenu-"VERSION);
 			exit(0);
 		}
 	    else if (!strcmp(argv[i], "-b")) /* appears at the bottom of the screen */

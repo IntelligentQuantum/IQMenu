@@ -1,8 +1,8 @@
-.TH IQ-MENU 1 IQ-MENU\-VERSION
+.TH IQMenu 1 IQMenu\-VERSION
 .SH NAME
-IQ-MENU \- IntelligentQuantum Menu
+IQMenu \- IntelligentQuantum Menu
 .SH SYNOPSIS
-.B IQ-MENU
+.B IQMenu
 .RB [ \-bfirvP ]
 .RB [ \-l
 .IR lines ]
@@ -23,41 +23,41 @@ IQ-MENU \- IntelligentQuantum Menu
 .RB [ \-w
 .IR windowid ]
 .P
-.BR IQ-MENU-Run " ..."
+.BR IQMenu_Run " ..."
 .SH DESCRIPTION
-.B IQ-MENU
+.B IQMenu
 is a intelligentquantum menu for X, which reads a list of newline\-separated items from
 stdin.  When the user selects an item and presses Return, their choice is printed
-to stdout and IQ-MENU terminates.  Entering text will narrow the items to those
+to stdout and IQMenu terminates.  Entering text will narrow the items to those
 matching the tokens in the input.
 .P
-.B IQ-MENU-Run
+.B IQMenu_Run
 is a script used by
 .IR IQ-WM (1)
 which lists programs in the user's $PATH and runs the result in their $SHELL.
 .SH OPTIONS
 .TP
 .B \-b
-IQ-MENU appears at the bottom of the screen.
+IQMenu appears at the bottom of the screen.
 .TP
 .B \-f
-IQ-MENU grabs the keyboard before reading stdin if not reading from a tty. This
+IQMenu grabs the keyboard before reading stdin if not reading from a tty. This
 is faster, but will lock up X until stdin reaches end\-of\-file.
 .TP
 .B \-i
-IQ-MENU matches menu items case insensitively.
+IQMenu matches menu items case insensitively.
 .TP
 .B \-P
-IQ-MENU will not directly display the keyboard input, but instead replace it with dots. All data from stdin will be ignored.
+IQMenu will not directly display the keyboard input, but instead replace it with dots. All data from stdin will be ignored.
 .TP
 .B \-r
-IQ-MENU will reject any input which would result in no matching option left.
+IQMenu will reject any input which would result in no matching option left.
 .TP
 .BI \-l " lines"
-IQ-MENU lists items vertically, with the given number of lines.
+IQMenu lists items vertically, with the given number of lines.
 .TP
 .BI \-m " monitor"
-IQ-MENU is displayed on the monitor number supplied. Monitor numbers are starting
+IQMenu is displayed on the monitor number supplied. Monitor numbers are starting
 from 0.
 .TP
 .BI \-p " prompt"
@@ -87,7 +87,7 @@ prints version information to stdout, then exits.
 .BI \-w " windowid"
 embed into windowid.
 .SH USAGE
-IQ-MENU is completely controlled by the keyboard.  Items are selected using the
+IQMenu is completely controlled by the keyboard.  Items are selected using the
 arrow keys, page up, page down, home, and end.
 .TP
 .B Tab

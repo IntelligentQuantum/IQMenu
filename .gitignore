@@ -1,2 +1,5 @@
 .idea
 .vscode
+*.o
+Stest
+IQMenu
